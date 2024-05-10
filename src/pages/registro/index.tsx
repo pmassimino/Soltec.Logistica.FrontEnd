@@ -99,9 +99,9 @@ const RegistroIndex = () => {
       <h5>Registro de Viajes</h5>
       <div className="row pt-2"> 
       <div className="col-1">
-        <a className='btn btn-outline' href="/registro/create">
+        <Link className='btn btn-outline' href="/registro/create">
         <i className="bi bi-file-earmark-plus"></i>Nuevo
-        </a>
+        </Link>
       </div>    
       <div className="col-3">
         <input
@@ -182,23 +182,23 @@ const RegistroIndex = () => {
                 </button>
                 <ul className="dropdown-menu">
                   <li>{entity.estado === "Disponible" ?
-                    (<a className="dropdown-item" onClick={() => handleAddViaje(entity)} href="#">Nuevo Corta</a>) : (
+                    (<Link className="dropdown-item" onClick={() => handleAddViaje(entity)} href="#">Nuevo Corta</Link>) : (
                       <span className="dropdown-item disabled">Nuevo Corta</span>)}
                   </li>
                   <li>{entity.estado === "Disponible" ?
-                    (<a className="dropdown-item" onClick={() => handleAddViaje(entity,2)} href="#">Nuevo Larga</a>) : (
+                    (<Link className="dropdown-item" onClick={() => handleAddViaje(entity,2)} href="#">Nuevo Larga</Link>) : (
                       <span className="dropdown-item disabled">Nuevo Larga</span>)}
                   </li>
                   <li>{entity.estado === "EnViaje" ?
-                    (<a className="dropdown-item" onClick={() => handleFinishViaje(entity)} href="#">Finalizar Viaje</a>) : (
+                    (<Link className="dropdown-item" onClick={() => handleFinishViaje(entity)} href="#">Finalizar Viaje</Link>) : (
                       <span className="dropdown-item disabled">Finalizar</span>)}
                   </li>
                   <li>{entity.estado != "EnViaje" ?
-                    (<a className="dropdown-item" href={`/registro/${entity.id}`}>Editar Registro</a>) : (
+                    (<Link className="dropdown-item" href={`/registro/${entity.id}`}>Editar Registro</Link>) : (
                       <span className="dropdown-item disabled">Editar Registro</span>)}
                   </li>
                   <li>{entity.cantidadCorto + entity.cantidadLargo == 0 ?
-                    (<a className="dropdown-item" onClick={() => handleDelete(entity)} href="#">Eliminar Registro</a>) : (
+                    (<Link className="dropdown-item" onClick={() => handleDelete(entity)} href="#">Eliminar Registro</Link>) : (
                       <span className="dropdown-item disabled">Eliminar Registro</span>)}
                   </li>
                 </ul>

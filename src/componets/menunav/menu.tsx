@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./menu.module.css";
+import Link from "next/link";
 
 type MenuProps = {
   isAuthenticated: boolean;
@@ -19,31 +20,31 @@ const Menu: React.FC<MenuProps> = ({ isAuthenticated, logout }) => (
     <div className="container-fluid">
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div className="navbar-nav">      
-      <a className="nav-link" href="/chofer">
+      <Link className="nav-link" href="/chofer">
         Choferes
-      </a>
-      <a className="nav-link" href="/registro">
+      </Link>
+      <Link className="nav-link" href="/registro">
         Registro
-      </a>
-      <a className="nav-link" href="/viaje">
+      </Link>
+      <Link className="nav-link" href="/viaje">
         Viajes
-      </a>
+      </Link>
       </div>
       </div>
       <div className="nav navbar-nav navbar-right">
         <div className="dropdown">
-        <a className="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <Link className="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i className="bi-person-circle"></i>
-        </a>
+        </Link>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a className="dropdown-item" href="/login"><i className="bi bi-box-arrow-in-right"></i>Login</a>
+          <Link className="dropdown-item" href="/login"><i className="bi bi-box-arrow-in-right"></i>Login</Link>
           {isAuthenticated && (
-            <a className="dropdown-item" href="" onClick={logout}><i className="bi bi-box-arrow-in-left"></i>Logout</a>
+            <Link className="dropdown-item" href="" onClick={logout}><i className="bi bi-box-arrow-in-left"></i>Logout</Link>
           )}
           <div className="dropdown-divider"></div>
-          <a className="dropdown-item" href="/usuarios">
+          <Link className="dropdown-item" href="/usuarios">
             Usuarios
-          </a>
+          </Link>
         </div>
         </div>
       </div>

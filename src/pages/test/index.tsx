@@ -12,9 +12,9 @@ const TestIndex = () => {
           Dropdown button
         </button>
         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a className="dropdown-item" href="#">Action</a>
-          <a className="dropdown-item" href="#">Another action</a>
-          <a className="dropdown-item" href="#">Something else here</a>
+          <Link className="dropdown-item" href="#">Action</Link>
+          <Link className="dropdown-item" href="#">Another action</Link>
+          <Link className="dropdown-item" href="#">Something else here</Link>
         </div>
       </div>
       <div className="dropdown">
@@ -22,9 +22,9 @@ const TestIndex = () => {
           Dropdown button
         </button>
         <ul className="dropdown-menu">
-          <li><a className="dropdown-item" href="#">Action</a></li>
-          <li><a className="dropdown-item" href="#">Another action</a></li>
-          <li><a className="dropdown-item" href="#">Something else here</a></li>
+          <li><Link className="dropdown-item" href="#">Action</Link></li>
+          <li><Link className="dropdown-item" href="#">Another action</Link></li>
+          <li><Link className="dropdown-item" href="#">Something else here</Link></li>
         </ul>
       </div>
     </Layout>

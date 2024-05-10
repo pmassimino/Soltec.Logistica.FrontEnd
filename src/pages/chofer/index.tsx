@@ -58,10 +58,10 @@ const ChoferIndex = () => {
       <h3>Choferes</h3>
       <div className="row">
       <div className="col-1">
-        <a className="btn btn-outline" href="/chofer/create">
+        <Link className="btn btn-outline" href="/chofer/create">
           <i className="bi bi-file-earmark-plus"></i>
           Nuevo
-        </a>
+        </Link>
       </div>  
       <div className="col-3">
         <input
@@ -88,7 +88,7 @@ const ChoferIndex = () => {
             <tr key={entity.id}>
               <td>{entity.id}</td>
               <td>{entity.nombre}</td>
-              <td><a className="btn" href={`/chofer/${entity.id}`}><i className="bi bi-pencil-square"></i></a></td>
+              <td><Link className="btn" href={`/chofer/${entity.id}`}><i className="bi bi-pencil-square"></i></Link></td>
               <td><button className="btn" onClick={() => handleDelete(entity)}><i className="bi bi-trash"></i></button></td>
             </tr>
           ))}

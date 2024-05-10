@@ -94,9 +94,9 @@ const ViajeIndex = () => {
       <h3>Viajes</h3>            
       <div className="input-group mb-3">
       <div>
-        <a className="btn"href="/viaje/create">
+        <Link className="btn"href="/viaje/create">
         <i className="bi bi-file-earmark-plus"></i>Crear nuevo viaje
-        </a>
+        </Link>
       </div>  
       <div className="col-3">
         <input 
@@ -166,7 +166,7 @@ const ViajeIndex = () => {
               <td>{entity.numeroComprobante}</td>
               <td>{entity.distancia}</td>
               <td>{entity.estado}</td>
-              <td>{entity.estado.trim() != "Finalizado" ? (<a className="btn"href={`/viaje/${entity.id}`}><i className="bi bi-pencil-square"></i></a>) : null}</td>
+              <td>{entity.estado.trim() != "Finalizado" ? (<Link className="btn"href={`/viaje/${entity.id}`}><i className="bi bi-pencil-square"></i></Link>) : null}</td>
               <td>{entity.estado.trim() != "Finalizado" ? (<button className="btn " onClick={() => handleDelete(entity)}><i className="bi bi-trash"></i></button>) : null}</td>
             </tr>
           ))}          

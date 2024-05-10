@@ -49,7 +49,7 @@ export default function LoginForm() {
       </label>
       <button type="submit">Login</button>
       {errorMessage && <p>{errorMessage}</p>}  
-      <div><a href={`/register`}>Registro Usuario</a></div>   
+      <div><Link href={`/register`}>Registro Usuario</Link></div>   
     </form>
   );
 }

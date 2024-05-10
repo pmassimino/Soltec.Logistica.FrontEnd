@@ -1,14 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { withAuth } from '@/componets/withAuth/withAuth'
-import Layout from '@/componets/Layout'
+import Layout from '@/componets/Layout';
+import { withAuth } from '@/componets/withAuth/withAuth';
+import React from 'react';
 
-const inter = Inter({ subsets: ['latin'] })
+const IndexPage: React.FC = () => {
+  return (
+    <Layout title='Index'>
+      <></>
+    </Layout>
+  );
+};
 
-const Home = () => (
-  <Layout title="Home">
-    
-  </Layout>
-);
-export default withAuth(Home);
+export default withAuth(IndexPage) ;
